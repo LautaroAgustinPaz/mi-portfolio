@@ -1,0 +1,240 @@
+.contenedor-footer {
+    border-top: 1px solid $custom-primary;
+    background-color: $custom-background;
+    padding: 5rem 0px 0rem 0px;
+    overflow: hidden;
+
+    // Columna - Imagen
+    .columna-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .footer-img {
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    // Columna - Indice
+    .columna-indice {
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .indice-titulo {
+            background: linear-gradient(to bottom, $custom-secondary-1, $custom-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+
+            font-family: $titulos;
+            font-size: 45px;
+            font-weight: 500; 
+        }
+
+        .indice-lista li {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+
+            .indice-text {
+                color: $custom-primary;
+                font-family: $parrafos;
+                font-size: $tamaño-parrafos;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    // Columna - Contacto
+    .columna-contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .contacto-titulo {
+            background: linear-gradient(to bottom, $custom-secondary-1, $custom-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+
+            font-family: $titulos;
+            font-size: 45px;
+            font-weight: 500; 
+        }
+        
+        .contenedor-parrafos {
+            margin-top: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 0px 10px;
+
+            .contacto-p {
+                color: $custom-primary;
+                font-family: $parrafos;
+                font-size: $tamaño-parrafos;
+                margin: 0px;
+
+                .icono-phone, .icono-location {
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .contenedor-redes-sociales {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+            .contenedor-redondo {
+                margin-top: 1.5rem;
+                border-radius: 100%;
+                padding: 10px 13px;
+                border: 1px solid $custom-primary;
+                color: $custom-primary;
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+                &:hover {
+                    background-color: $custom-primary;
+                    color: $custom-background;
+                    cursor: pointer;
+                    }
+
+                a {
+                    color: inherit; // Hereda el valor de color que ya se está usando.
+                    text-decoration: none;
+                }
+                
+                .iconos-redes {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    
+    // Columna - Boton Arriba
+    .columna-btn-arriba {
+        margin: 3rem 0px 0px 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .row {
+            .contenedor-btn-arriba {
+                .btn-arriba {
+                    .icon-arriba {
+                        background-color: $custom-secondary-2;
+                        border-radius: 20px;
+                        padding: 15px;
+                        font-size: 20px;
+                        cursor: pointer;
+                        color: $custom-secondary-1;
+                        border: 1px solid $custom-secondary-1;
+
+                        &:hover {
+                            box-shadow: 0 8px 12px 0 $custom-secondary-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Columna - Corpyright
+    .columna-copyright {
+        margin: 3rem 0px 0px 0px;
+        border-top: 1px solid $custom-secondary-2;
+
+        .row {
+            .contenedor-copyright {
+                background-color: $custom-background;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                color: red;
+                padding: 1rem 3rem 1rem 3rem;
+
+                .negocio-y-derechos {
+                    display: flex;
+                    flex-direction: column;
+
+                    .parrafo {
+                        margin-bottom: 0px;
+                        font-size: 13px;
+                        color: $custom-primary;
+                        font-family: $parrafos;
+                        
+                    }
+                }
+
+                .firma {
+                    margin-bottom: 0px;
+                    font-size: 13px;
+                    color: $custom-primary;
+                    font-family: $parrafos;
+                    
+                    a {
+                        cursor: pointer;
+                        text-decoration: none;
+                        color: $custom-secondary-1;
+
+                        &:hover {
+                            font-weight: bold;
+                            color: $custom-secondary-1;      
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    .contenedor-footer {
+
+        .columna-img {
+            
+            margin-bottom: 5rem;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .contenedor-footer {
+
+        .columna-indice {
+            margin-bottom: 4rem;
+        }
+
+        .columna-copyright .row .contenedor-copyright {
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .negocio-y-derechos {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+

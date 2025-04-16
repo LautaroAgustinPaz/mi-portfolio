@@ -1,0 +1,94 @@
+
+.servicios-contenedor {
+    border-top: 1px solid $custom-primary;
+    background-color: $custom-background;
+    padding: 5rem 0rem 5rem 0rem;
+    overflow: hidden;
+    border-bottom: 1px solid $custom-primary;
+
+    .servicios-title {
+        color: $custom-primary;
+        font-family: $titulos;
+        font-size: $secciones-titulos;
+        font-weight: 400;
+        padding-bottom: 5rem;
+    }
+
+    .contenedor-card-servicios {
+
+        
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+        .card-contenedor {
+            padding: 0px;
+
+            .servicios-cards {
+                    border: 1px solid $custom-primary;
+                    border-radius: 20px;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    overflow: hidden;
+            
+                    &:hover {
+                        transform: scale(1.01);
+                    }
+            
+                    .servicios-imgs {
+                        border-radius: 20px 20px 2px 2px;
+                        height: 300px;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+            
+                    .card-body {
+                        width: 100%;
+                        height: 150px;
+                        background-color: $custom-primary;
+                        padding: 20px !important;
+
+                        min-height: 100px;
+                        display: flex;
+                        align-content: center;
+                        align-items: center;
+                        justify-content: center;
+            
+                        .card-title {
+                            text-align: center;
+                            margin: 0px;
+                            font-family: $titulos;
+                            font-size: 28px;
+                            font-weight: 400;
+                            color: $titulos-color;
+                        }
+                    }
+                }
+
+        }
+    }
+}
+
+// Media Queries
+@media (max-width: 767px) {
+
+    .servicios-contenedor {
+        padding: 5rem 3rem 5rem 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .servicios-contenedor {
+        padding: 5rem 27px 5rem 27px;
+    }
+}
+
+@media (max-width: 250px) {
+
+    .servicios-contenedor .contenedor-card-servicios .card-contenedor .servicios-cards .card-body {
+        .card-title {
+            font-size: 25px;
+        }
+    }
+}

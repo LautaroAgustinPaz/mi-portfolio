@@ -1,0 +1,58 @@
+// _navbar.scss
+.navbar {
+    background-color: $custom-background;
+    padding: 15px 15px 15px 15px;
+    border-bottom: 1px solid $custom-primary;
+    min-height: 50px;
+
+    a .navbar-logo {
+        height: 60px;
+        width: 60px;
+        cursor: pointer;
+    }
+
+    .navbar-toggler {
+        border: none;
+
+        .bi-list {
+            color: $custom-primary;
+            width: 2.8rem;
+            height: 2.8rem;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none; 
+        }
+    }
+    .offcanvas-body {
+        padding: 30px;
+    }
+
+    // Menu desplegable - OFFCANVAS
+    .offcanvas-header, .offcanvas-body {
+        background-color: $custom-background;
+        border-left: 1px solid $custom-primary;
+
+        // Boton Close
+        .btn-close {
+            font-size: 25px;
+            padding: 25px 25px 0px 0px;
+
+            &:focus {
+                outline: none;
+                box-shadow: none; 
+            }
+        }
+
+        // Links
+        .nav-link {
+            font-size: 28px;
+            font-family: $titulos;
+        }
+
+        .nav-link.active {
+            color: $custom-primary !important;
+        }
+    }    
+}

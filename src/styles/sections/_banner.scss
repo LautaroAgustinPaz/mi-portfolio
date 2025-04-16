@@ -1,0 +1,131 @@
+.container-banner_principal.loading {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+}
+.container-banner_principal:not(.loading) #background-video {
+    filter: blur(0);
+}
+
+/* Contenedor principal del banner */
+.container-banner_principal {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.644); /* Color oscuro*/
+    
+
+    /* Video de fondo */
+    #background-video {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        /* Evita parpadeos de color al cargar */
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+
+        & {
+            filter: blur(10px);
+            transition: filter 1s ease-in-out;
+        }
+    }
+
+    /* Contenido encima del video */
+    .content {
+        position: relative;
+        z-index: 1;
+        /* Asegura que el texto esté encima del video */
+        text-align: center;
+        color: white;
+        padding: 8rem 30px 30px 30px;
+
+        /*  Título  */
+        .banner-p_titulo {
+            font-family: $titulos;
+            font-size: 4.5rem;
+            font-weight: 400;
+            background: $custom-degrade; // Aplica el degradé como fondo
+            -webkit-background-clip: text; // Recorta el fondo al área del texto
+            color: transparent; // Hace que el color del texto sea transparente
+            margin-bottom: 50px;
+        }
+        
+        // Contendor Boton + Icono + Texto
+        .btn-custom {
+            background-color: transparent;
+            border: 1px solid $custom-primary;
+            color: $custom-primary;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 15px;
+            padding: 10px 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: $custom-secondary-3;
+            
+            &:hover {
+                border: 1px solid $custom-secondary-1;
+                background-color: $custom-secondary-2;
+                color: $custom-secondary-1;
+                transform: scale(1.02);
+            }
+
+            // Icono WhatsApp
+            .i {
+            color: $custom-primary; // Usa la variable de Sass
+            font-size: 21px; // Tamaño del icono
+            margin-right: 15px;
+            }
+
+            &:hover > .i {
+                color: darken($custom-secondary-1, 10%); // Cambia el color al hacer hover
+            }
+        }
+        
+
+    }
+}
+
+//  Media Queries
+
+@media (max-width: 768px) {
+    .banner-p_titulo {
+        font-size: 4rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-p_titulo {
+        font-size: 3rem !important;
+    }
+}
+@media (max-width: 340px) {
+
+    .container-banner_principal {
+        .content {
+            .btn-custom {
+                font-size: 13px;
+
+                .i {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    .banner-p_titulo {
+        font-size: 2.4rem !important;
+    }
+}

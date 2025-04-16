@@ -1,0 +1,109 @@
+.contenedor-sobremi {
+    border-top: 1px solid $custom-primary;
+    background-color: $custom-background;
+    padding: 5rem 3rem 5rem 3rem;
+    overflow: hidden;
+
+    .sobre-mi_titulo {
+        color: $custom-primary;
+        font-family: $titulos;
+        font-size: $secciones-titulos;
+        padding-bottom: 5rem;
+    }
+
+    .sobre-mi_row {
+        min-height: 500px;
+        border: 1.5px solid $custom-primary;
+        border-radius: 20px;
+        overflow: hidden;
+        margin: 0px 10px;
+
+        // Columna  - IMG
+        .columna-img {
+            padding: 0px;
+            min-height: 500px;
+
+            .foto-biografia {
+                min-height: 100%;
+                width: 100%;
+                object-fit: cover;
+                overflow: hidden;
+            }
+        }
+
+        // Columna - BIOGRAFIA
+        .columna-biografia {
+            background-color: $custom-primary;
+            padding: 40px 40px;
+
+            display: flex;
+            flex-direction: column;
+
+            .biografia_titulo {
+                font-family: $titulos;
+                color: $custom-background;
+                font-size: 60px;
+
+                background: linear-gradient(to bottom, $custom-background, $titulo-degrade-color-2); /* Cambia "to right" por "to bottom" */
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+
+            .biografia_parrafo {
+                margin-top: 40px;
+                margin-bottom: 0px;
+                font-size: 17px;
+                font-family: $parrafos;
+                color: $custom-background;
+                font-weight: 500;
+            }
+
+            .grupo-redes-sociales {
+                margin-top: 100px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 20px;
+
+                .contenedor-redondo a {
+                    border-radius: 100%;
+                    padding: 10px 12px;
+                    border: 1px solid $custom-background;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:hover {
+                        background-color: $custom-secondary-2;
+                        cursor: pointer;
+                    }
+
+                    .iconos-redes {
+                        font-size: 25px;
+                        color: $custom-background;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Celulares
+@media (max-width: 480px) { 
+
+    .contenedor-sobremi {
+        padding-right: 20px;
+        padding-left: 15px;
+
+        .sobre-mi_row {
+            margin: 0px;
+
+            .columna-biografia {
+            padding: 25px 20px;
+            }
+        }
+    }
+}
