@@ -5,14 +5,36 @@
     border-bottom: 1px solid $custom-primary;
     min-height: 50px;
 
-    a .navbar-logo {
-        height: 60px;
-        width: 60px;
+    .navbar-contendor-elementos {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        width: 100%;
+    }
+
+    // Columna vacia en la izquierda
+    .navbar-placeholder {
+        width: 50px;
+    }
+
+    // contenedor img (A)
+    .navbar-center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    // img
+    .navbar-logo {
+        height: 45px;
+        width: 45px;
         cursor: pointer;
     }
 
     .navbar-toggler {
         border: none;
+        margin-right: 10px;
 
         .bi-list {
             color: $custom-primary;
