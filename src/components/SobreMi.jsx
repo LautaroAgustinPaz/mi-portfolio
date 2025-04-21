@@ -33,12 +33,15 @@ const SobreMi = () => {
         <h2 className='sobre-mi_titulo text-center'>Sobre mi</h2>
 
         <div className="row sobre-mi_row">
-            <div className="col-sm-12 col-md-6 col-lg-6 columna-img">
-                <img className='foto-biografia' src="/imgs/foto-tatuador.webp" alt="foto-tatuador" loading="lazy"/>
-            </div>
+
             <div className="col-sm-12 col-md-6 col-lg-6 columna-biografia">
-                <h2 className='biografia_titulo'>Nahuel Diaz</h2>
-                <p className='biografia_parrafo'>¡Hola! Soy Nahuel Díaz, un apasionado tatuador residente en la vibrante ciudad de Buenos Aires. Desde muy joven, descubrí que el arte era mi forma de expresarme y conectar con el mundo. Mi viaje en el mundo del tatuaje comenzó cuando tenía apenas 16 años, y desde entonces he dedicado mi vida a perfeccionar esta técnica ancestral.</p>
+                <h2 className='biografia_titulo'>Hola, soy</h2>
+                <h2 className='biografia-titulo-2'>Lautaro Paz</h2>
+                <p className='biografia_parrafo'>Me encanta crear y diseñar sitios web, que brinden una experiencia única como satisfactoria, poder intervenir en interfaces que tengan parte de mi creatividad y dedicación.
+
+                Tengo 23 años, soy un programador Full Stack, constantemente estoy aprendiendo nuevas tecnologias y herramientas, para mejorar mis habilidades.
+
+                Espero que trabajemos juntos!</p>
 
                 <div className='grupo-redes-sociales'>
                     <div className='contenedor-redondo'><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram}  className='iconos-redes'/></a></div>
@@ -46,6 +49,10 @@ const SobreMi = () => {
                     <div className='contenedor-redondo'><a href="https://www.tiktok.com/es/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTiktok} className='iconos-redes'/></a></div>
                 </div>
             </div>
+                <div className="col-sm-12 col-md-6 col-lg-6 columna-img">
+                  <img className='foto-biografia' src="/imgs/foto-me.jpg" alt="foto-tatuador" loading="lazy"/>
+                </div>
+
         </div>
     </section>
     

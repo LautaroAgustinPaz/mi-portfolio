@@ -1,30 +1,28 @@
 .contenedor-sobremi {
-    border-top: 1px solid $custom-primary;
     background-color: $custom-background;
-    padding: 5rem 3rem 5rem 3rem;
+    padding: 5rem 0rem 5rem 0rem;
     overflow: hidden;
 
     .sobre-mi_titulo {
-        color: $custom-primary;
         font-family: $titulos;
+        color: $custom-primary;
         font-size: $secciones-titulos;
         padding-bottom: 5rem;
     }
 
     .sobre-mi_row {
-        min-height: 500px;
-        border: 1.5px solid $custom-primary;
+        height: 100%;
         border-radius: 20px;
-        overflow: hidden;
-        margin: 0px 10px;
-
+ 
         // Columna  - IMG
         .columna-img {
             padding: 0px;
-            min-height: 500px;
+            min-height: 100%;
 
             .foto-biografia {
-                min-height: 100%;
+                border-radius: 30px 0px 0px 30px;
+                border: 1.4px solid $custom-primary;
+                height: 85%;
                 width: 100%;
                 object-fit: cover;
                 overflow: hidden;
@@ -33,29 +31,31 @@
 
         // Columna - BIOGRAFIA
         .columna-biografia {
-            background-color: $custom-primary;
-            padding: 40px 40px;
+            background-color: $custom-background;
+            padding: 40px 50px;
 
             display: flex;
             flex-direction: column;
 
             .biografia_titulo {
-                font-family: $titulos;
-                color: $custom-background;
-                font-size: 60px;
-
-                background: linear-gradient(to bottom, $custom-background, $titulo-degrade-color-2); /* Cambia "to right" por "to bottom" */
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
+                font-family: 'Raleway', sans-serif;
+                color: $custom-primary;
+                font-size: 50px;
+            }
+            .biografia-titulo-2 {
+                font-size: 50px;
+                color: aqua;
+                font-family: 'Cormorant', serif;
+                font-style: italic;
+                font-weight: 700;
             }
 
             .biografia_parrafo {
-                margin-top: 40px;
+                margin-top: 30px;
                 margin-bottom: 0px;
                 font-size: 17px;
                 font-family: $parrafos;
-                color: $custom-background;
+                color: $custom-primary;
                 font-weight: 500;
             }
 
@@ -69,7 +69,7 @@
                 .contenedor-redondo a {
                     border-radius: 100%;
                     padding: 10px 12px;
-                    border: 1px solid $custom-background;
+                    border: 1px solid $custom-primary;
                     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
                     display: flex;
@@ -83,7 +83,7 @@
 
                     .iconos-redes {
                         font-size: 25px;
-                        color: $custom-background;
+                        color: $custom-primary;
                     }
                 }
             }
