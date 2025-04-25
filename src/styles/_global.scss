@@ -26,3 +26,16 @@ section {
     min-height: 100vh;
     /* o el valor que necesites */
 }
+
+.sobre-mi_titulo {
+    font-family: $titulos;
+    color: $custom-primary;
+    font-size: $secciones-titulos;
+    font-style: italic;
+    display: inline-block;
+    font-weight: 100;
+    border: 1px solid $custom-primary;
+    padding: 10px 40px;
+    border-radius: 50px;
+    background: $custom-degrade-h2;
+}

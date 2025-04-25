@@ -1,7 +1,7 @@
 // Colores personalizados
 
 $custom-primary: #ffffff; 
-$custom-background: #090909;
+$custom-background: #040404;
 
 $custom-secondary-1: #F2F601;
 $custom-secondary-2: #f2f6012b; 
@@ -11,6 +11,7 @@ $custom-secondary-3: #ffffff22;
 
 $titulo-degrade-color-2: #666666;
 $custom-degrade: linear-gradient(to right, #ffffff, #F2F601);
+$custom-degrade-h2: linear-gradient(to right, #000000, #373737);
 
 // Titulos Colores
 
@@ -23,5 +24,5 @@ $parrafos: 'DM Sans', sans-serif;
 
 // Titulos Tamaños
 
-$secciones-titulos: 40px;
+$secciones-titulos: 22px;
 $tamaño-parrafos: 16px;

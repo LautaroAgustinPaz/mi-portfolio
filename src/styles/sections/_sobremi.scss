@@ -3,11 +3,23 @@
     padding: 5rem 0rem 5rem 0rem;
     overflow: hidden;
 
-    .sobre-mi_titulo {
-        font-family: $titulos;
-        color: $custom-primary;
-        font-size: $secciones-titulos;
-        padding-bottom: 5rem;
+    .contenedor-titulo {
+        text-align: center;
+        margin-bottom: 5rem;
+
+        // GLOBAL
+        .sobre-mi_titulo {
+            font-family: $titulos;
+            color: $custom-primary;
+            font-size: $secciones-titulos;
+            font-style: italic;
+            display: inline-block;
+            font-weight: 100;
+            border: 1px solid $custom-primary;
+            padding: 10px 40px;
+            border-radius: 50px;
+            background: $custom-degrade-h2;
+        }
     }
 
     .sobre-mi_row {
@@ -18,11 +30,15 @@
         .columna-img {
             padding: 0px;
             min-height: 100%;
+            display: flex;
+            justify-content: end;
+            align-content: center;
+            align-items: flex-start;
 
             .foto-biografia {
                 border-radius: 30px 0px 0px 30px;
                 border: 1.4px solid $custom-primary;
-                height: 85%;
+                height: 78%;
                 width: 100%;
                 object-fit: cover;
                 overflow: hidden;
@@ -40,18 +56,18 @@
             .biografia_titulo {
                 font-family: 'Raleway', sans-serif;
                 color: $custom-primary;
-                font-size: 50px;
+                font-size: 48px;
             }
             .biografia-titulo-2 {
-                font-size: 50px;
-                color: aqua;
+                font-size: 48px;
+                color: #3AFFAC;
                 font-family: 'Cormorant', serif;
                 font-style: italic;
                 font-weight: 700;
             }
 
             .biografia_parrafo {
-                margin-top: 30px;
+                margin-top: 25px;
                 margin-bottom: 0px;
                 font-size: 17px;
                 font-family: $parrafos;
