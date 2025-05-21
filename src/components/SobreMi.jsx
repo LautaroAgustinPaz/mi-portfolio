@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faFacebook, faTiktok} from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFileLines } from '@fortawesome/free-solid-svg-icons';
 import ScrollReveal from 'scrollreveal';
 import React, { useEffect } from 'react'
 
@@ -43,8 +44,8 @@ const SobreMi = () => {
                   Me gusta participar en proyectos donde el diseño y la performance van de la mano. Valoro el trabajo en equipo y busco siempre generar un ambiente empático y colaborativo. Estoy en constante aprendizaje, tanto a nivel técnico como personal.</p>
 
                 <div className='grupo-redes-sociales'>
-                   <div className='contenedor-redondo'><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram}  className='iconos-redes'/></a></div>
-                    <div className='contenedor-redondo'><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook}  className='iconos-redes'/></a></div>
+                    <div className='contenedor-redondo'><a href="https://www.linkedin.com/in/lautaro-paz-71795b243/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin}  className='iconos-redes'/></a></div> 
+                    <div className='contenedor-redondo'><a href="/CV-LautaroPaz.pdf" dowloand><FontAwesomeIcon icon={faFileLines}  className='iconos-redes'/></a></div>
                 </div>
             </div>
                 <div className="col-sm-12 col-md-6 col-lg-6 columna-img">

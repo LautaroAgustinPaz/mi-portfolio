@@ -1,11 +1,11 @@
 .contenedor-sobremi {
     background-color: $custom-background;
-    padding: 5rem 0rem 0rem 0rem;
-    overflow: hidden;
+    padding: 4em 0rem 0rem 0rem;
+    overflow: hidden; // para que no desborde el contenedor, lo ocultamos si pasa
 
     .contenedor-titulo {
         text-align: center;
-        margin-bottom: 5rem;
+        margin-bottom: 4rem;
 
         // GLOBAL
         .sobre-mi_titulo {
@@ -23,23 +23,25 @@
     }
 
     .sobre-mi_row {
-            height: auto; // Ya no forzamos el tamaño
+            height: 100%; // Ya no forzamos el tamaño
+            display: flex;
+            align-items: stretch; // tengan las columnas las mismas medidas
 
         // Columna  - IMG
         .columna-img {
-            padding: 0px;
-            display: flex;
-            justify-content: end;
-            align-content: center;
-            align-items: center;
+            height: 88vh;
+            display: block;
+            padding: 20px 0px;
 
             .foto-biografia {
                 border-radius: 30px 0px 0px 30px;
-                border: 1.4px solid $custom-primary;
-                max-height: 500px; // Controlamos la altura
+
+                border-right: none;
+
+                height: 100%; // Controlamos la altura
                 width: 100%;
                 object-fit: cover;
-                overflow: hidden;
+                object-position: center center;
             }
         }
 
@@ -47,7 +49,6 @@
         .columna-biografia {
             background-color: $custom-background;
             padding: 40px 50px;
-            border: 1px solid green;
 
             display: flex;
             flex-direction: column;
@@ -59,7 +60,7 @@
             }
             .biografia-titulo-2 {
                 font-size: 48px;
-                color: #3AFFAC;
+                color: $custom-secondary-1;
                 font-family: 'Cormorant', serif;
                 font-style: italic;
                 font-weight: 700;
@@ -75,7 +76,7 @@
             }
 
             .grupo-redes-sociales {
-                margin-top: 80px;
+                margin-top: 40px;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
@@ -83,7 +84,7 @@
 
                 .contenedor-redondo a {
                     border-radius: 100%;
-                    padding: 10px 12px;
+                    padding: 10px 14px;
                     border: 1px solid $custom-primary;
                     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
@@ -108,18 +109,23 @@
 
 @media (max-width: 768px) {
     .sobre-mi_row {
-        flex-direction: column; // Apila imagen y texto
-        align-items: center;
-    }
+        height: 100vh;
+        display: block;
 
-    .columna-img,
-    .columna-biografia {
-        width: 100%;
-        max-width: 500px;
-    }
+        .columna-biografia {
+            height: auto;
+        }
 
-    .foto-biografia {
-        border-radius: 30px; // Quitar bordes laterales si está centrada
+        .columna-img {
+            height: auto;
+
+            .foto-biografia {
+                padding-right: 12px;
+                padding-left: 12px;
+                border-radius: 30px 30px 30px 30px !important; 
+                border: none !important;
+            }
+        }
     }
 }
 
@@ -134,8 +140,21 @@
             margin: 0px;
 
             .columna-biografia {
+            height: auto;
+            display: block;
             padding: 25px 20px;
             }
+
+            .columna-img {
+                padding: 60px 0px 75px 0px;
+
+                .foto-biografia {
+                    border-radius: 30px;
+                    border: none;
+                    padding: 0px;
+                }
+            }
+
         }
     }
 }
