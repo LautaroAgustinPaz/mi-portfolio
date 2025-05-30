@@ -1,0 +1,37 @@
+.seccion-habilidades {
+    background-color: $custom-background;
+    padding: 4rem 0rem 0rem 0rem;
+
+    .contenedor-titulo {
+        text-align: center;
+        margin-bottom: 4rem;
+
+        .habilidades-titulo {  // Pasarlo a un global de subtitulos este estilo
+            font-family: $titulos;
+            color: $custom-primary;
+            font-size: $secciones-titulos;
+            font-style: italic;
+            display: inline-block;
+            font-weight: 100;
+            border: 1px solid $custom-primary;
+            padding: 10px 40px;
+            border-radius: 50px;
+            background: $custom-degrade-h2;
+        }
+    }
+
+    .contenedor-habilidades {
+        height: 100%; // Ya no forzamos el tamaño
+        display: flex;
+        justify-content: center;
+
+        .card {
+            height: 250px;
+            width: 250px;
+            justify-content: center;
+            text-align: center;
+            margin: 10px;
+        }
+
+    }
+}

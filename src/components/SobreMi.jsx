@@ -36,6 +36,7 @@ const SobreMi = () => {
       </div>
 
         <div className="row sobre-mi_row">
+
             <div className="col-sm-12 col-md-6 col-lg-6 columna-biografia">
                 <h2 className='biografia_titulo'>Hola, soy</h2>
                 <h2 className='biografia-titulo-2'>Lautaro Paz</h2>
@@ -48,9 +49,10 @@ const SobreMi = () => {
                     <div className='contenedor-redondo'><a href="/CV-LautaroPaz.pdf" dowloand><FontAwesomeIcon icon={faFileLines}  className='iconos-redes'/></a></div>
                 </div>
             </div>
-                <div className="col-sm-12 col-md-6 col-lg-6 columna-img">
-                  <img className='foto-biografia' src="/imgs/foto-me.jpg" alt="foto-tatuador" loading="lazy"/>
-                </div>
+
+            <div className="col-sm-12 col-md-6 col-lg-6 columna-img">
+              <img className='foto-biografia' src="/imgs/foto-me.jpg" alt="foto-tatuador" loading="lazy"/>
+            </div>
         </div>
     </section>
     
