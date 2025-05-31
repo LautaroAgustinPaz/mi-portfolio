@@ -26,11 +26,20 @@
         justify-content: center;
 
         .card {
-            height: 250px;
-            width: 250px;
+            height: 235px;
+            width: 270px;
+            display: flex;
             justify-content: center;
-            text-align: center;
+            align-items: center;
             margin: 10px;
+            border-radius: 30px;
+            border: 1.5px solid $custom-primary;
+            background-color: $custom-secondary-3;
+
+            img {
+               height: 110px;
+               width: 110px; 
+            }
         }
 
     }
