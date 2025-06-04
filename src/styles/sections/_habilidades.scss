@@ -1,3 +1,7 @@
+.row {
+    flex-wrap: wrap;
+}
+
 .seccion-habilidades {
     background-color: $custom-background;
     padding: 4rem 0rem 0rem 0rem;
@@ -17,6 +21,7 @@
             padding: 10px 40px;
             border-radius: 50px;
             background: $custom-degrade-h2;
+            overflow: hidden;
         }
     }
 
@@ -24,23 +29,49 @@
         height: 100%; // Ya no forzamos el tamaño
         display: flex;
         justify-content: center;
+        align-items: center;
+        padding: 20px 0px;
+
 
         .card {
-            height: 235px;
-            width: 270px;
+            height: 220px;
+            width: 250px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 10px;
+            margin: 12px;
             border-radius: 30px;
-            border: 1.5px solid $custom-primary;
+            border: 0.5px solid $custom-primary;
             background-color: $custom-secondary-3;
+            transition: transform 0.3s ease, border 0.3s ease; // Animación
+
+            &:hover { // Efectos
+                transform: scale(1.03); // efecto leve de zoom
+                box-shadow: $custom-secondary-2 0px 10px 50px;
+                border: 0.5px solid $custom-secondary-1;
+            }
 
             img {
-               height: 110px;
-               width: 110px; 
+               height: 100px;
+               width: 100px; 
             }
         }
 
     }
+}
+
+// Breakpoints 
+
+@media (max-width: 548px) {
+    .card {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+        border-radius: 20px;
+    } 
+
+    img {
+        height: 80px;
+        width: 80px; 
+     }
 }

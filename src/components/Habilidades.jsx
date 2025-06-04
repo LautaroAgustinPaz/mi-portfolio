@@ -11,28 +11,28 @@ const Habilidades = () => {
 
       <div className="row contenedor-habilidades">
 
-        <div className='card card-html col-lg-3'>
+        <div className='card card-html col-6 col-md-4 col-lg-3'>
           <img src="public/imgs/tecnologias/html.png" alt="html"/>
         </div>
-        <div className='card card-html col-lg-3'>
+        <div className='card card-html col-6 col-md-4  col-lg-3'>
           <img src="public/imgs/tecnologias/css.png" alt="css"/>
         </div>
-        <div className='card card-html col-lg-3'>
+        <div className='card card-html col-6 col-md-4 col-lg-3'>
           <img src="public/imgs/tecnologias/sass.png" alt="sass"/>
         </div>
-        <div className='card card-html col-lg-3'>
+        <div className='card card-html col-6 col-md-4 col-lg-3'>
           <img src="public/imgs/tecnologias/bootstrap.png" alt=""/>
         </div>
-        <div className='card card-html col-lg-3'>
+        <div className='card card-html col-6 col-md-4 col-lg-3'>
           <img src="public/imgs/tecnologias/js.png" alt=""/>
         </div>
-        <div className='card card-html col-lg-3'>
+        <div className='card card-html col-6 col-md-4 col-lg-3'>
           <img src="public/imgs/tecnologias/react.png" alt=""/>
         </div>
-        <div className='card card-html col-lg-3'>
+        <div className='card card-html col-6 col-md-4 col-lg-3'>
           <img src="public/imgs/tecnologias/nodejs.png" alt=""/>
         </div>
-        <div className='card card-html col-lg-3'>
+        <div className='card card-html col-6 col-md-4 col-lg-3'>
           <img src="public/imgs/tecnologias/mongodb.png" alt=""/>
         </div>
     
