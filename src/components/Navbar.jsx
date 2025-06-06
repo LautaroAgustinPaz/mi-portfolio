@@ -1,35 +1,39 @@
 import React, { useEffect, useState } from 'react'
+import Splitting from 'splitting';
+import 'splitting/dist/splitting.css';
 
 const Navbar = () => {
 
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState(''); // Estado para saber en donde estamos
 
   useEffect(() => {
-  const sections = document.querySelectorAll("section[id]");
-  const observer = new IntersectionObserver (
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    },
-    { 
-      threshold: 0.3 ,
-      rootMargin: '50px'
-    } 
-  );
 
-  sections.forEach((section) => {
-    observer.observe(section);
-  });
+    Splitting(); // se ejecuta al montar y divide el texto por letras para efecto candado
+    const sections = document.querySelectorAll("section[id]"); //Selecciona todas las secciones que tengan un id, por ejemplo <section id="inicio">.
+    const observer = new IntersectionObserver ( // Observa si esas secciones están en pantalla. Si alguna entra en el viewport, actualiza el activeSection para que el link correspondiente se resalte.
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { 
+        threshold: 0.3 ,
+        rootMargin: '50px'
+      } 
+    );
 
-  return () => {
     sections.forEach((section) => {
-      observer.unobserve(section);
+      observer.observe(section);
     });
-  };
-  }, []);
+
+    return () => { // Cuando el componente se desmonta, detiene la observación para no dejar procesos colgados.
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+}, []);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -58,27 +62,27 @@ const Navbar = () => {
           <div className="offcanvas-header">
             <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
+
           {/* BODY */}
           <div className="offcanvas-body">
+
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+              
               <li className="nav-item">
-                <a 
-                  className={`nav-link ${activeSection === 'inicio' ? 'active' : ''}`} 
-                  href="#inicio"
+                <a data-splitting className={`nav-link ${activeSection === 'inicio' ? 'active' : ''}`} href="#inicio"
                 >
-                  Inicio
+                  INICIO
                 </a>
               </li>
+
               <li className="nav-item">
-                <a 
-                  className={`nav-link ${activeSection === 'sobre-mi' ? 'active' : ''}`} 
-                  href="#sobre-mi"
-                  onClick={() => setActiveSection('sobre-mi')}
-                >
-                  Sobre mí
+                <a data-splitting className={`nav-link ${activeSection === 'sobre-mi' ? 'active' : ''}`} href="#sobre-mi"onClick={() => setActiveSection('sobre-mi')}>
+                  SOBRE MI
                 </a>
               </li>
+              
             </ul>
+
           </div>
         </div>
 

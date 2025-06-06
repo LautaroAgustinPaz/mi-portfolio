@@ -1,9 +1,8 @@
-// _navbar.scss
 .navbar {
-    // background-color: $custom-background;
-    background-color: $custom-secondary-2;
+    background-color: $custom-background;
     padding: 15px 15px 15px 15px;
     min-height: 50px;
+    border-bottom: 1px solid $titulo-degrade-color-2;
 
     .navbar-contendor-elementos {
         display: flex;
@@ -32,6 +31,8 @@
         cursor: pointer;
     }
 
+
+// MENU HAMBURGUESA
     .navbar-toggler {
         border: none;
         margin-right: 10px;
@@ -48,13 +49,13 @@
         }
     }
     .offcanvas-body {
-        padding: 30px;
+        padding: 40px;
     }
 
-    // Menu desplegable - OFFCANVAS
+// Menu desplegable - OFFCANVAS
     .offcanvas-header, .offcanvas-body {
         background-color: $custom-background;
-        border-left: 1px solid $custom-primary;
+        border-left: 1px solid $titulo-degrade-color-2;
 
         // Boton Close
         .btn-close {
@@ -69,8 +70,9 @@
 
         // Links
         .nav-link {
-            font-size: 28px;
+            font-size: 30px;
             font-family: $titulos;
+            font-style: italic;
         }
 
         .nav-link.active {
@@ -78,3 +80,25 @@
         }
     }    
 }
+
+.nav-link {
+    font-family: $titulos;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+
+    .char {
+        font-family: $titulos !important;
+        display: inline-block;
+        transition: transform 0.5s ease;
+        transition-delay: calc(var(--char-index) * 0.03s);
+    }
+
+    &:hover .char {
+        transform: rotateX(360deg);
+        color: $custom-secondary-1;
+    }
+
+    &.active {
+        color: $custom-secondary-1;
+    } }

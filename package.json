@@ -22,7 +22,8 @@
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",
     "sass": "^1.83.4",
-    "scrollreveal": "^4.0.9"
+    "scrollreveal": "^4.0.9",
+    "splitting": "^1.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
