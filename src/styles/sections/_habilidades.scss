@@ -3,12 +3,14 @@
 }
 
 .seccion-habilidades {
+    min-height: auto;
     background-color: $custom-background;
-    padding: 4rem 0rem 0rem 0rem;
+    padding: 4rem 0rem 0rem 0rem !important;
+    margin: 0px !important;
 
+    // TITULO
     .contenedor-titulo {
         text-align: center;
-        padding-bottom: 4rem;
 
         .habilidades-titulo {  // Pasarlo a un global de subtitulos este estilo
             font-family: $titulos;
@@ -22,16 +24,45 @@
             border-radius: 50px;
             background: $custom-degrade-h2;
             overflow: hidden;
+            margin: 0px !important;
         }
     }
 
+    // CONTENEDOR - HABILIDADES
     .contenedor-habilidades {
         height: 100%; // Ya no forzamos el tamaño
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        overflow: hidden;
         align-items: center;
-        padding: 20px 0px;
+        padding: 60px 0px 4rem 0px;
 
+        .fila {
+            display: inline-flex;
+            flex-wrap: nowrap;
+            gap: 1rem;
+            width: max-content;
+            animation-duration: 40s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+
+            &:hover,
+            &:active {
+                animation-play-state: paused;
+            }
+            
+            &.fila-superior {
+                animation-name: moverDerecha;
+              }
+        
+            &.fila-inferior {
+                padding-top: 10px;
+                animation-name: moverIzquierda;
+            }   
+        }
+        
         .card {
             height: 210px;
             width: 250px;
@@ -42,6 +73,7 @@
             border-radius: 30px;
             border: 0.5px solid $titulo-degrade-color-2;
             background-color: $custom-secondary-3;
+
             transition: transform 0.3s ease, border 0.3s ease; // Animación
 
             &:hover { // Efectos
@@ -59,18 +91,41 @@
     }
 }
 
-// Breakpoints 
 
-@media (max-width: 548px) {
-    .card {
-        width: 100%;
-        height: auto;
-        margin: 10px 0;
-        border-radius: 20px;
+// ANIMACIONES
+@keyframes moverIzquierda {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-40%);
+    }
+}
+
+@keyframes moverDerecha {
+    0% {
+        transform: translateX(-40%);
+    }
+
+    100% {
+        transform: translateX(0);
     } 
+}
 
-    img {
-        height: 80px;
-        width: 80px; 
-     }
+
+// BREAKPOINTS
+@media (max-width: 548px) {
+
+    .seccion-habilidades {
+        padding-bottom: 4rem !important;
+    }
+
+    .contenedor-habilidades {
+        padding: 0px !important;
+    }
+
+    .contenedor-titulo {
+        padding-bottom: 4rem !important;
+    }
 }
