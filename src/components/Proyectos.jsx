@@ -59,11 +59,14 @@ const Proyectos = () => {
         <Slider {...settings}>
           {proyectos.map((proyecto) => (
             <div key={proyecto.id} className='slide-proyecto'>
-              <img src={proyecto.imagen} alt={proyecto.titulo} />
-              <h3>{proyecto.titulo}</h3>
+              <div className='slide'>
+
+              </div>
+              {/* <img src={proyecto.imagen} alt={proyecto.titulo} /> Esto vamos a transformarlo en un div que contenga una imagen*/}
+              {/* <h3>{proyecto.titulo}</h3>
               <p>{proyecto.parrafo}</p>
               <a href={proyecto.link} target='_blank'></a>
-              <a href={proyecto.repositorio} target='_blank'></a>
+              <a href={proyecto.repositorio} target='_blank'></a> */}
             </div>
           ))}
         </Slider>

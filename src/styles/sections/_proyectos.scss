@@ -1,4 +1,5 @@
 .seccion-proyectos {
+    height: 110vh;
     background-color: red;
     padding: 0rem 0rem 0rem 0rem !important;
     margin: 0px !important;
@@ -25,15 +26,35 @@
     }
 
         .slide-proyecto {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100% !important; // asegurar que ocupa todo el ancho
+            height: 100%;
+            background-color: rgb(147, 28, 147) !important;
 
             text-align: center !important;
-            background-color: violet !important;
-            height: 500px !important;
-            width: 80% !important;
-            
-            img {
+            height: 450px !important;
+            width: 100% !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .slide {
                 width: 100%;
-                height: 100%;
+                max-width: 800px; // limitar el ancho para que quede como en la imagen
+                height: 450px;
+                border-radius: 15px;
+                
+                background-image: url('imgs/proyectos/proyecto-protfolio.tatto.jpeg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                margin: 0 auto; // centrado horizontal por si el flex no surte efecto
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
 }
