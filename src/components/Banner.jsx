@@ -9,11 +9,12 @@ const Banner = () => {
   return (
     <section id='inicio' className={`container-banner_principal ${!videoLoaded ? 'loading' : ''}`}>
       <video autoPlay muted loop id="background-video" onLoadedData={() => setVideoLoaded(true)}>
-        <source src="/vids/video-2.webm" type="video/webm" />
+        <source src="/imgs/video-placeholder-2.mp4" type="video/mp4" />
         Tu navegador no soporta videos HTML5.
       </video>
       <div className='content'>
-        <h1 className='banner-p_titulo'>Programador</h1>
+        <h2 className='banner-titulo-dev'>PROGRAMADOR</h2>
+        <h2 className='banner-titulo-front-end'>FRONT END</h2>
       </div>
     </section>
   );

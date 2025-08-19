@@ -52,15 +52,22 @@
         color: white;
         padding: 8rem 30px 30px 30px;
 
-        /*  Título  */
-        .banner-p_titulo {
+        /*  Títulos  */
+        .banner-titulo-dev {
             font-family: $titulos;
-            font-size: 4.5rem;
+            font-size: 3.5rem;
+
+        }
+        .banner-titulo-front-end {
+            font-family: $titulos;
+            font-size: 4.9rem;
+        }
+
+        .banner-titulo-dev,
+        .banner-titulo-front-end {
+            margin: 0;           /* eliminás márgenes por defecto */
+            line-height: 0.95;    /* ajustás altura de línea */
             font-weight: 400;
-            background: $custom-degrade; // Aplica el degradé como fondo
-            -webkit-background-clip: text; // Recorta el fondo al área del texto
-            color: transparent; // Hace que el color del texto sea transparente
-            margin-bottom: 50px;
         }
         
         // Contendor Boton + Icono + Texto

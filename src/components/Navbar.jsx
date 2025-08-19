@@ -42,14 +42,14 @@ const Navbar = () => {
   return (
     <>
     <nav className="navbar navbar-dark fixed-top">
-      <div className="container-fluid d-flex justify-content-between align-items-center">
+      <div className="container-fluid d-flex contenedor-fluido">
         
         {/* Columna izquierda vacía con mismo ancho que el botón */}
-        <div className="navbar-placeholder" />
+        {/* <div className="navbar-placeholder" />  className='navbar-center'> */} 
 
         <div className='navbar-contendor-elementos'>
-          <a href="#inicio" onClick={scrollToTop} className='navbar-center'>
-          <img className='navbar-logo' src="imgs/logo-lautaropaz.png" width="50" height="50" fetchpriority="high" alt='logo' onClick={scrollToTop} />
+          <a href="#inicio" onClick={scrollToTop}>  
+            <img className='navbar-logo' src="imgs/logo-lautaropaz.png" width="50" height="50" fetchpriority="high" alt='logo' onClick={scrollToTop} />
           </a>
           <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
@@ -77,7 +77,25 @@ const Navbar = () => {
 
               <li className="nav-item">
                 <a data-splitting className={`nav-link ${activeSection === 'sobre-mi' ? 'active' : ''}`} href="#sobre-mi"onClick={() => setActiveSection('sobre-mi')}>
-                  SOBRE MI
+                  SOBRE MÍ
+                </a>
+              </li>
+
+              <li className="nav-item">
+                <a data-splitting className={`nav-link ${activeSection === 'sobre-mi' ? 'active' : ''}`} href="#habilidades"onClick={() => setActiveSection('sobre-mi')}>
+                  HABILIDADES
+                </a>
+              </li>
+
+              <li className="nav-item">
+                <a data-splitting className={`nav-link ${activeSection === 'sobre-mi' ? 'active' : ''}`} href="#proyectos"onClick={() => setActiveSection('sobre-mi')}>
+                  PROYECTOS
+                </a>
+              </li>
+
+              <li className="nav-item">
+                <a data-splitting className={`nav-link ${activeSection === 'sobre-mi' ? 'active' : ''}`} href="#contactame"onClick={() => setActiveSection('sobre-mi')}>
+                  CONTÁCTAME
                 </a>
               </li>
               

@@ -1,41 +1,33 @@
 .navbar {
-    background-color: $custom-background;
-    padding: 15px 15px 15px 15px;
+    padding: 15px 17px 15px 17px !important;
     min-height: 50px;
+    background-color: $custom-background;
     border-bottom: 1px solid $titulo-degrade-color-2;
+
+    // Ajuste de tamaños en navbar
+    .container-fluid {
+        padding: 0px !important;
+    }
 
     .navbar-contendor-elementos {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
         position: relative;
         width: 100%;
-    }
 
-    // Columna vacia en la izquierda
-    .navbar-placeholder {
-        width: 50px;
+        // img
+        .navbar-logo {
+            height: 40px;
+            width: 40px;
+            cursor: pointer;
+        }
     }
-
-    // contenedor img (A)
-    .navbar-center {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    // img
-    .navbar-logo {
-        height: 45px;
-        width: 45px;
-        cursor: pointer;
-    }
-
 
 // MENU HAMBURGUESA
     .navbar-toggler {
         border: none;
-        margin-right: 10px;
+        padding: 0px;
 
         .bi-list {
             color: $custom-primary;
