@@ -55,12 +55,12 @@
         /*  Títulos  */
         .banner-titulo-dev {
             font-family: $titulos;
-            font-size: 3.5rem;
+            font-size: clamp(3rem, 6vw, 4.2rem);
 
         }
         .banner-titulo-front-end {
             font-family: $titulos;
-            font-size: 4.9rem;
+            font-size: clamp(4.1rem, 8vw, 5.9rem);
         }
 
         .banner-titulo-dev,
@@ -69,70 +69,23 @@
             line-height: 0.95;    /* ajustás altura de línea */
             font-weight: 400;
         }
-        
-        // Contendor Boton + Icono + Texto
-        .btn-custom {
-            background-color: transparent;
-            border: 1px solid $custom-primary;
-            color: $custom-primary;
-            font-size: 18px;
-            font-weight: 500;
-            border-radius: 15px;
-            padding: 10px 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background-color: $custom-secondary-3;
-            
-            &:hover {
-                border: 1px solid $custom-secondary-1;
-                background-color: $custom-secondary-2;
-                color: $custom-secondary-1;
-                transform: scale(1.02);
-            }
-
-            // Icono WhatsApp
-            .i {
-            color: $custom-primary; // Usa la variable de Sass
-            font-size: 21px; // Tamaño del icono
-            margin-right: 15px;
-            }
-
-            &:hover > .i {
-                color: darken($custom-secondary-1, 10%); // Cambia el color al hacer hover
-            }
-        }
-        
-
     }
 }
 
 //  Media Queries
 
-@media (max-width: 768px) {
-    .banner-p_titulo {
-        font-size: 4rem !important;
-    }
-}
 
-@media (max-width: 480px) {
-    .banner-p_titulo {
-        font-size: 3rem !important;
-    }
-}
-@media (max-width: 340px) {
+@media (max-width: 404px) {
 
-    .container-banner_principal {
-        .content {
-            .btn-custom {
-                font-size: 13px;
-
-                .i {
-                    font-size: 15px;
-                }
-            }
+    /*  Títulos  */
+        .banner-titulo-dev {
+            font-family: $titulos;
+            font-size: 2.2rem !important;
+    
         }
-    }
-
-    .banner-p_titulo {
-        font-size: 2.4rem !important;
-    }
+    
+        .banner-titulo-front-end {
+            font-family: $titulos;
+            font-size: 3.1rem !important;
+        }
 }
