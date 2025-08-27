@@ -1,15 +1,13 @@
 .seccion-proyectos {
-    height: 110vh;
-    background-color: red;
-    padding: 0rem 0rem 0rem 0rem !important;
-    margin: 0px !important;
+    background: black;
+    padding: 4rem 0;
     overflow: hidden;
 
     .contenedor-titulo {
         text-align: center;
         padding-bottom: 4rem;
 
-        .habilidades-titulo {  // Pasarlo a un global de subtitulos este estilo
+        .habilidades-titulo {
             font-family: $titulos;
             color: $custom-primary;
             font-size: $secciones-titulos;
@@ -25,36 +23,108 @@
         }
     }
 
-        .slide-proyecto {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100% !important; // asegurar que ocupa todo el ancho
-            height: 100%;
-            background-color: rgb(147, 28, 147) !important;
+    .slide-proyecto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-            text-align: center !important;
-            height: 450px !important;
-            width: 100% !important;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .slide {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            max-width: 800px;
+            height: 450px;
+            width: 100%;
+            margin: 0 auto;
 
-            .slide {
+            .img-fondo {
                 width: 100%;
-                max-width: 800px; // limitar el ancho para que quede como en la imagen
-                height: 450px;
-                border-radius: 15px;
-                
-                background-image: url('imgs/proyectos/proyecto-protfolio.tatto.jpeg');
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+                display: block;
+            }
 
-                margin: 0 auto; // centrado horizontal por si el flex no surte efecto
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            .slide-card {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 2rem;
+                transform: translateY(100%);
+                transition: transform 0.4s ease;
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+                box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
+                text-align: left;
+                z-index: 5;
+
+                h3 {
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    margin-bottom: 1rem;
+                    color: black;
+                }
+
+                p {
+                    margin-bottom: 1.5rem;
+                    color: #333;
+                }
+
+                .botones {
+                    display: flex;
+                    gap: 1rem;
+
+                    .btn {
+                        padding: 0.7rem 1.5rem;
+                        border-radius: 10px;
+                        font-weight: 600;
+                        text-decoration: none;
+                        transition: 0.3s ease;
+                        border: 2px solid black;
+                        font-size: 0.9rem;
+                    }
+
+                    .negro {
+                        background-color: black;
+                        color: white;
+                    }
+
+                    .blanco {
+                        background-color: white;
+                        color: black;
+                    }
+
+                    .negro:hover,
+                    .blanco:hover {
+                        opacity: 0.85;
+                    }
+                }
+            }
+
+            &:hover .slide-card,
+            &.mostrar-overlay .slide-card {
+                transform: translateY(0%);
+            }
+
+            .toggle-overlay {
+                position: absolute;
+                bottom: 1rem;
+                right: 1rem;
+                z-index: 10;
+                padding: 0.5rem 1rem;
+                border: none;
+                background-color: #000;
+                color: white;
+                border-radius: 10px;
+                cursor: pointer;
+                font-weight: bold;
+
+                @media (min-width: 768px) {
+                    display: none;
+                }
             }
         }
+    }
 }

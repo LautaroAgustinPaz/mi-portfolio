@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 const proyectos = [{
   id: 1,
   titulo: 'Portfolio Tatuador',
-  imagen: "imgs/proyectos/portfolio-tatuador.jpeg",
+  imagen: "public/imgs/proyectos/proyecto-protfolio.tatto.jpeg",
   parrafo: "",
   link: "https://landing-page-tatto-portfolio.vercel.app/",
   repositorio: "https://github.com/LautaroAgustinPaz/landingPage-TattoPortfolio"
@@ -14,7 +14,7 @@ const proyectos = [{
 {
   id: 2,
   titulo: 'Portfolio Tatuador',
-  imagen: "imgs/proyectos/portfolio-tatuador.jpeg",
+  imagen: "public/imgs/proyectos/proyecto-protfolio.tatto.jpeg",
   parrafo: "",
   link: "https://landing-page-tatto-portfolio.vercel.app/",
   repositorio: "https://github.com/LautaroAgustinPaz/landingPage-TattoPortfolio"
@@ -22,7 +22,7 @@ const proyectos = [{
 {
   id: 3,
   titulo: 'Portfolio Tatuador',
-  imagen: "imgs/proyectos/portfolio-tatuador.jpeg",
+  imagen: "public/imgs/proyectos/proyecto-protfolio.tatto.jpeg",
   parrafo: "",
   link: "https://landing-page-tatto-portfolio.vercel.app/",
   repositorio: "https://github.com/LautaroAgustinPaz/landingPage-TattoPortfolio"
@@ -30,7 +30,7 @@ const proyectos = [{
 {
   id: 4,
   titulo: 'Portfolio Tatuador',
-  imagen: "imgs/proyectos/portfolio-tatuador.jpeg",
+  imagen: "public/imgs/proyectos/proyecto-protfolio.tatto.jpeg",
   parrafo: "",
   link: "https://landing-page-tatto-portfolio.vercel.app/",
   repositorio: "https://github.com/LautaroAgustinPaz/landingPage-TattoPortfolio"
@@ -38,6 +38,22 @@ const proyectos = [{
 ]
 
 const Proyectos = () => {
+
+  const [visibleInfo, setVisibleInfo] = useState(null);
+
+  const toggleOverlay = (proyectoid) => {
+    // Si ya está visible este mismo proyecto, lo oculto
+    if (visibleInfo === proyectoid) {
+      setVisibleInfo(null);
+    } else {
+      // Si es otro proyecto, lo muestro
+      setVisibleInfo(proyectoid);
+    }
+  };
+
+  const alternarSuperposicion = (id) => {
+    setVisibleInfo()
+  }
 
   var settings = {
     dots: true,
@@ -58,15 +74,26 @@ const Proyectos = () => {
         {/* Slide */}
         <Slider {...settings}>
           {proyectos.map((proyecto) => (
-            <div key={proyecto.id} className='slide-proyecto'>
-              <div className='slide'>
 
+            <div key={proyecto.id} className='slide-proyecto'>
+              
+              <div className={`slide ${visibleInfo === proyecto.id ? 'mostrar-overlay' : ''}`}>
+                <img src={proyecto.imagen} alt={proyecto.titulo} className="img-fondo" />
+
+                <div className="slide-card">
+                  <h3>{proyecto.titulo}</h3>
+                  <p>{proyecto.parrafo}</p>
+                  <div className="botones">
+                    <a href={proyecto.link} className="btn negro" target="_blank">VISITAR</a>
+                    <a href={proyecto.repositorio} className="btn blanco" target="_blank">REPOSITORIO</a>
+                  </div>
+                </div>
+
+                {/* Botón solo visible en mobile */}
+                <button className="toggle-overlay" onClick={() => toggleOverlay(proyecto.id)}>
+                  Ver Info
+                </button>
               </div>
-              {/* <img src={proyecto.imagen} alt={proyecto.titulo} /> Esto vamos a transformarlo en un div que contenga una imagen*/}
-              {/* <h3>{proyecto.titulo}</h3>
-              <p>{proyecto.parrafo}</p>
-              <a href={proyecto.link} target='_blank'></a>
-              <a href={proyecto.repositorio} target='_blank'></a> */}
             </div>
           ))}
         </Slider>
