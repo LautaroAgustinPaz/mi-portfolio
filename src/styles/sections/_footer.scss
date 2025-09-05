@@ -30,6 +30,7 @@
             background-clip: text;
 
             font-family: $titulos;
+            font-style: italic;
             font-size: 45px;
             font-weight: 500; 
         }
@@ -67,6 +68,7 @@
             background-clip: text;
 
             font-family: $titulos;
+            font-style: italic;
             font-size: 45px;
             font-weight: 500; 
         }
@@ -76,16 +78,16 @@
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            padding: 0px 10px;
+            gap: 5px;
+            padding: 0px 5px;
 
             .contacto-p {
                 color: $custom-primary;
                 font-family: $parrafos;
                 font-size: $tamaño-parrafos;
-                margin: 0px;
+                margin-right: 0px;
 
-                .icono-phone, .icono-location {
+                .icono-email {
                     margin-right: 5px;
                 }
             }
@@ -97,15 +99,13 @@
             gap: 10px;
 
             .contenedor-redondo {
-                margin-top: 1.5rem;
+                margin-top: 1rem;
                 border-radius: 100%;
-                padding: 10px 13px;
+                padding: 11px 13px 8px 13px;
                 border: 1px solid $custom-primary;
                 color: $custom-primary;
                 
-                display: flex;
-                align-items: center;
-                justify-content: center;
+
 
 
                 &:hover {
@@ -115,6 +115,8 @@
                     }
 
                 a {
+                    padding: 0px!important;
+                    margin: 0px !important;
                     color: inherit; // Hereda el valor de color que ya se está usando.
                     text-decoration: none;
                 }

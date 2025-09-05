@@ -54,20 +54,21 @@
                 padding: 2rem;
                 transform: translateY(100%);
                 transition: transform 0.4s ease;
-                border-top-left-radius: 25px;
-                border-top-right-radius: 25px;
                 box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
                 text-align: left;
                 z-index: 5;
 
                 h3 {
+                    font-family: $titulos;
                     font-size: 1.8rem;
-                    font-weight: 700;
+                    font-weight: 100 !important;
                     margin-bottom: 1rem;
                     color: black;
                 }
 
                 p {
+                    font-family: $parrafos;
+                    font-family: 100 !important;
                     margin-bottom: 1.5rem;
                     color: #333;
                 }
@@ -87,11 +88,15 @@
                     }
 
                     .negro {
+                        font-family: $parrafos;
+                        font-weight: 100 !important;
                         background-color: black;
                         color: white;
                     }
 
                     .blanco {
+                        font-family: $parrafos;
+                        font-weight: 100 !important;
                         background-color: white;
                         color: black;
                     }
@@ -106,6 +111,11 @@
             &:hover .slide-card,
             &.mostrar-overlay .slide-card {
                 transform: translateY(0%);
+            }
+
+            .slide-card.ocultar-overlay {
+            opacity: 0;
+            visibility: hidden;
             }
 
             .toggle-overlay {

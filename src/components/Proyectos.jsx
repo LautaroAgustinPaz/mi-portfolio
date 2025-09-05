@@ -3,11 +3,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+// PROYECTOS
 const proyectos = [{
   id: 1,
-  titulo: 'Portfolio Tatuador',
+  titulo: 'PORTFOLIO TATUADOR',
   imagen: "public/imgs/proyectos/proyecto-protfolio.tatto.jpeg",
-  parrafo: "",
+  parrafo: "Un proyecto orientado a tatuadores, que puedan mostrar su trabajo, es una landing page con efectos y elegancia",
   link: "https://landing-page-tatto-portfolio.vercel.app/",
   repositorio: "https://github.com/LautaroAgustinPaz/landingPage-TattoPortfolio"
 },
@@ -77,7 +78,8 @@ const Proyectos = () => {
 
             <div key={proyecto.id} className='slide-proyecto'>
               
-              <div className={`slide ${visibleInfo === proyecto.id ? 'mostrar-overlay' : ''}`}>
+              {/* Overlay de info */}
+              <div className={`slide ${visibleInfo === proyecto.id ? 'mostrar-overlay' : 'ocultar-overlay'}`}>
                 <img src={proyecto.imagen} alt={proyecto.titulo} className="img-fondo" />
 
                 <div className="slide-card">
@@ -91,7 +93,7 @@ const Proyectos = () => {
 
                 {/* Botón solo visible en mobile */}
                 <button className="toggle-overlay" onClick={() => toggleOverlay(proyecto.id)}>
-                  Ver Info
+                  {visibleInfo === proyecto.id ? "No ver info" : "Ver info"}
                 </button>
               </div>
             </div>
