@@ -1,9 +1,6 @@
-import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
+import { faChevronUp} from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedinIn, } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-
 
 const Footer = () => {
 
@@ -20,18 +17,17 @@ const Footer = () => {
 
             {/* Columna 1 - Foto */}
             <div className="col-sm-12 col-md-4 columna-img">
-                <img src="imgs/logo-tatto.webp" alt="Logo" className="img-fluid footer-img" loading="lazy"></img>
+                <img src="public/imgs/logo-lautaropaz.png" alt="Logo" className="img-fluid footer-img" loading="lazy"></img>
             </div>
 
             {/* Columna 2 - Indice */}
             <div className="col-xs-12 col-sm-6 col-md-4 columna-indice">
                 <h5 className="indice-titulo">Índice</h5>
                 <ul className="list-unstyled indice-lista">
-                    <li><a href="#" className="indice-text text-decoration-none">Servicios</a></li>
-                    <li><a href="#" className="indice-text text-decoration-none">Galería</a></li>
-                    <li><a href="#" className="indice-text text-decoration-none">Sobre mí</a></li>
-                    <li><a href="#" className="indice-text text-decoration-none">Opiniones</a></li>
-                    <li><a href="#" className="indice-text text-decoration-none">Ubicación</a></li>
+                    <li><a href="#sobre-mi" className="indice-text text-decoration-none">Sobre mí</a></li>
+                    <li><a href="#habilidades" className="indice-text text-decoration-none">Habilidades</a></li>
+                    <li><a href="#proyectos" className="indice-text text-decoration-none">Proyectos</a></li>
+                    <li><a href="#contacto" className="indice-text text-decoration-none">Contacto</a></li>
                 </ul>
             </div>
 
@@ -42,9 +38,8 @@ const Footer = () => {
                     <p className='contacto-p'><i className="icono-email fa-solid fa-square-envelope"></i> lautaropaz__@hotmail.com</p>
                 </div>
                 <div className='contenedor-redes-sociales'>
-                    <div className='contenedor-redondo'><a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub}  className='iconos-redes'/></a></div>
-                    <div className='contenedor-redondo'><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedinIn}  className='iconos-redes'/></a></div>
-                    <div className='contenedor-redondo'><a href="https://support.microsoft.com/es-es/office/c%C3%B3mo-iniciar-o-cerrar-sesi%C3%B3n-en-outlook-com-e08eb8ac-ac27-49f4-a400-a47311e1ee7e" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGlobeAmericas} className='iconos-redes'/></a></div>
+                    <div className='contenedor-redondo'><a href="https://github.com/LautaroAgustinPaz" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub}  className='iconos-redes'/></a></div>
+                    <div className='contenedor-redondo'><a href="https://www.linkedin.com/in/lautaro-paz-71795b243/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedinIn}  className='iconos-redes'/></a></div>
                 </div>
             </div>     
         </div>

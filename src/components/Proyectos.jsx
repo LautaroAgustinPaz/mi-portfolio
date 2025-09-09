@@ -7,35 +7,19 @@ import "slick-carousel/slick/slick-theme.css";
 const proyectos = [{
   id: 1,
   titulo: 'PORTFOLIO TATUADOR',
-  imagen: "public/imgs/proyectos/proyecto-protfolio.tatto.jpeg",
-  parrafo: "Un proyecto orientado a tatuadores, que puedan mostrar su trabajo, es una landing page con efectos y elegancia",
+  imagen: "imgs/proyectos/tatto-portfolio.jpg",
+  parrafo: "Landing page elegante desarrollada con Vite, HTML semántico, SCSS y JavaScript. Pensada para tatuadores que desean mostrar su trabajo con estilo, incluye efectos visuales armónicos y una carga fluida para una experiencia intuitiva.",
   link: "https://landing-page-tatto-portfolio.vercel.app/",
   repositorio: "https://github.com/LautaroAgustinPaz/landingPage-TattoPortfolio"
 },
 {
   id: 2,
-  titulo: 'Portfolio Tatuador',
-  imagen: "public/imgs/proyectos/proyecto-protfolio.tatto.jpeg",
-  parrafo: "",
-  link: "https://landing-page-tatto-portfolio.vercel.app/",
-  repositorio: "https://github.com/LautaroAgustinPaz/landingPage-TattoPortfolio"
-},
-{
-  id: 3,
-  titulo: 'Portfolio Tatuador',
-  imagen: "public/imgs/proyectos/proyecto-protfolio.tatto.jpeg",
-  parrafo: "",
-  link: "https://landing-page-tatto-portfolio.vercel.app/",
-  repositorio: "https://github.com/LautaroAgustinPaz/landingPage-TattoPortfolio"
-},
-{
-  id: 4,
-  titulo: 'Portfolio Tatuador',
-  imagen: "public/imgs/proyectos/proyecto-protfolio.tatto.jpeg",
-  parrafo: "",
-  link: "https://landing-page-tatto-portfolio.vercel.app/",
-  repositorio: "https://github.com/LautaroAgustinPaz/landingPage-TattoPortfolio"
-},
+  titulo: 'QUICK TASK',
+  imagen: "imgs/proyectos/quick-task.jpg",
+  parrafo: "Aplicación CRUD en React que se conecta a una API REST (MockAPI), permitiendo crear, editar y eliminar tareas desde la interfaz de usuario de manera ágil y dinámica.",
+  link: "https://quick-task-pruebatenica.netlify.app/",
+  repositorio: "https://github.com/LautaroAgustinPaz/quick-task"
+}
 ]
 
 const Proyectos = () => {
@@ -65,7 +49,7 @@ const Proyectos = () => {
   };
 
   return (
-    <section id="proyectos" className='seccion-proyectos container-fluid'>
+    <section className='seccion-proyectos container-fluid'>
     
         {/* Titulo     */}
         <div className='contenedor-titulo'>
@@ -76,7 +60,7 @@ const Proyectos = () => {
         <Slider {...settings}>
           {proyectos.map((proyecto) => (
 
-            <div key={proyecto.id} className='slide-proyecto'>
+            <div key={proyecto.id} className='slide-proyecto'  id="proyectos">
               
               {/* Overlay de info */}
               <div className={`slide ${visibleInfo === proyecto.id ? 'mostrar-overlay' : 'ocultar-overlay'}`}>

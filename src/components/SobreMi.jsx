@@ -30,12 +30,12 @@ const SobreMi = () => {
     
   return (
 
-    <section id='sobre-mi' className='container-fluid contenedor-sobremi'>
+    <section className='container-fluid contenedor-sobremi'>
       <div className='contenedor-titulo'>
         <h2 className='sobre-mi_titulo text-center'>Sobre mi</h2>
       </div>
 
-        <div className="row sobre-mi_row">
+        <div id='sobre-mi' className="row sobre-mi_row">
 
             <div className="col-sm-12 col-md-6 col-lg-6 columna-biografia">
                 <h2 className='biografia_titulo'>Hola, soy</h2>
