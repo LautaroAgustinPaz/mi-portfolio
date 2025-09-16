@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600&family=DM+Sans:wght@400;500;700&family=Raleway:wght@400;600;700&display=swap');
 
-*, ::after, ::before {
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -8,23 +8,9 @@
     font-family: 'DM Sans', sans-serif;
 }
 
-body {
-    background-color: white;
-}
 // Scroll suave
 html {
     scroll-behavior: smooth;
-}
-
-// Cuando redirecciona en la seccion, lo posiciona arriba de todo.
-:root {
-    scroll-padding-top: 80px;               
-    /* Ajusta según la altura de tu header */
-}
-
-section {
-    min-height: 100vh;
-    /* o el valor que necesites */
 }
 
 .sobre-mi_titulo {

@@ -1,7 +1,9 @@
 .seccion-proyectos {
+    min-height: auto;
     background: $titulos-color;
     padding: 0rem 0rem 3rem 0rem;
     overflow: hidden;
+    background-color: #000;
 
     .contenedor-titulo {
         text-align: center;
@@ -145,5 +147,9 @@
         opacity: 1;     
         transition: color 0.3s ease;
       }
+    }
+
+    .separador {
+        background-color: #000;
     }
 }

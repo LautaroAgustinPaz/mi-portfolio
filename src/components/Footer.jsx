@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp} from '@fortawesome/free-solid-svg-icons'
+import { faChevronUp, faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedinIn, } from '@fortawesome/free-brands-svg-icons';
+
 
 const Footer = () => {
 
@@ -44,7 +45,7 @@ const Footer = () => {
             <div className="col-xs-12 col-sm-6 col-md-4 columna-contacto">
                 <h5 className="contacto-titulo">Contacto</h5>
                 <div className='contenedor-parrafos'>   
-                    <p className='contacto-p'><i className="icono-email fa-solid fa-square-envelope"></i> lautaropaz__@hotmail.com</p>
+                    <p className='contacto-p'><FontAwesomeIcon icon={faEnvelope} className='icono-email'/>lautaropaz__@hotmail.com</p>
                 </div>
                 <div className='contenedor-redes-sociales'>
                     <div className='contenedor-redondo'><a href="https://github.com/LautaroAgustinPaz" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub}  className='iconos-redes'/></a></div>
