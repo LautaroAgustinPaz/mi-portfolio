@@ -20,6 +20,15 @@ const Habilidades = () => {
 
   // Para que se pause en mobile
   useEffect(() => {
+      ScrollReveal().reveal('.sobre-mi_titulo', {
+      origin: 'bottom',
+      distance: '50px',
+      duration: 1000,
+      delay: 200,
+      easing: 'ease-in-out',
+      reset: false
+    });
+
     const filas = document.querySelectorAll('.fila');
   
     const pauseAnimation = () => filas.forEach(fila => fila.style.animationPlayState = 'paused');

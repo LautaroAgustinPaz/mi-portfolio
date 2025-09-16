@@ -12,6 +12,15 @@ const Footer = () => {
      };
     
   return (
+    <div>
+    <div class="separador">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+    <path d="M0,224 C360,96 1080,352 1440,192" 
+      fill="none" 
+      stroke="#ffffff"
+      stroke-width="2" />
+  </svg>
+</div>
     <section className='container-fluid contenedor-footer'>
         <div className='row'>
 
@@ -69,6 +78,7 @@ const Footer = () => {
         </div>
 
     </section>
+    </div>
   )
 }
 

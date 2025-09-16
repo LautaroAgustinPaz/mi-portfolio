@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ScrollReveal from "scrollreveal";
 
 // PROYECTOS
 const proyectos = [{
   id: 1,
   titulo: 'PORTFOLIO TATUADOR',
   imagen: "imgs/proyectos/tatto-portfolio.jpg",
-  parrafo: "Landing page elegante desarrollada con Vite, HTML semántico, SCSS y JavaScript. Pensada para tatuadores que desean mostrar su trabajo con estilo, incluye efectos visuales armónicos y una carga fluida para una experiencia intuitiva.",
+  parrafo: "Landing page elegante desarrollada con Vite, HTML semántico, SCSS y React. Pensada para tatuadores que desean mostrar su trabajo con estilo, incluye efectos visuales armónicos y una carga fluida para una experiencia intuitiva.",
   link: "https://landing-page-tatto-portfolio.vercel.app/",
   repositorio: "https://github.com/LautaroAgustinPaz/landingPage-TattoPortfolio"
 },
@@ -23,6 +24,19 @@ const proyectos = [{
 ]
 
 const Proyectos = () => {
+
+  useEffect(() => {
+
+    ScrollReveal().reveal('.contenedor-slide', {
+      origin: 'bottom',
+      distance: '50px',
+      duration: 1000,
+      delay: 300,
+      easing: 'ease-in-out',
+      reset: false
+    });
+
+  }, []);
 
   const [visibleInfo, setVisibleInfo] = useState(null);
 
@@ -42,10 +56,11 @@ const Proyectos = () => {
 
   var settings = {
     dots: true,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToScroll: 1
   };
 
   return (
@@ -57,9 +72,9 @@ const Proyectos = () => {
         </div>
 
         {/* Slide */}
-        <Slider {...settings}>
+        <div className='contenedor-slide'>
+        <Slider {...settings} className='slide'>
           {proyectos.map((proyecto) => (
-
             <div key={proyecto.id} className='slide-proyecto'  id="proyectos">
               
               {/* Overlay de info */}
@@ -83,6 +98,9 @@ const Proyectos = () => {
             </div>
           ))}
         </Slider>
+        </div>
+        
+
 
     </section>
   )

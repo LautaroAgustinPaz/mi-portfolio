@@ -1,6 +1,6 @@
 .seccion-proyectos {
-    background: black;
-    padding: 4rem 0;
+    background: $titulos-color;
+    padding: 0rem 0rem 3rem 0rem;
     overflow: hidden;
 
     .contenedor-titulo {
@@ -136,5 +136,14 @@
                 }
             }
         }
+    }
+
+    button {
+      &::before {
+        font-size: 12px;       
+        color: $custom-secondary-1 !important;        
+        opacity: 1;     
+        transition: color 0.3s ease;
+      }
     }
 }

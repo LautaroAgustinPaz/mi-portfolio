@@ -2,13 +2,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faFileLines } from '@fortawesome/free-solid-svg-icons';
 import ScrollReveal from 'scrollreveal';
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 
 const SobreMi = () => {
 
     useEffect(() => {
 
-    ScrollReveal().reveal('.sobre-mi_titulo', {
+    ScrollReveal().reveal('.habilidades-titulo', {
       origin: 'bottom',
       distance: '50px',
       duration: 1000,
