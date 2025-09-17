@@ -4,13 +4,16 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    font-display: swap;
     font-family: 'DM Sans', sans-serif;
 }
 
 // Scroll suave
 html {
     scroll-behavior: smooth;
+}
+
+div {
+    background-color: black;
 }
 
 .sobre-mi_titulo {

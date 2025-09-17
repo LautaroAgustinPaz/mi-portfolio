@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.644); /* Color oscuro*/
+    // background: rgba(0, 0, 0, 0.644); /* Color oscuro*/
     
 
     /* Video de fondo */
@@ -35,7 +35,7 @@
         width: 100vw;
         height: 100vh;
         object-fit: cover;
-        z-index: -1;
+        z-index: 0;
 
         & {
             filter: blur(10px);
@@ -51,16 +51,19 @@
         text-align: center;
         color: white;
         padding: 8rem 30px 30px 30px;
+        background-color: transparent !important;
 
         /*  Títulos  */
         .banner-titulo-dev {
             font-family: $titulos;
             font-size: clamp(3rem, 6vw, 4.2rem);
+            background-color: transparent !important;
 
         }
         .banner-titulo-front-end {
             font-family: $titulos;
             font-size: clamp(4.1rem, 8vw, 5.9rem);
+            background-color: transparent !important;
         }
 
         .banner-titulo-dev,

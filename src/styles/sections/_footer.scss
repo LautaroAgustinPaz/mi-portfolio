@@ -1,17 +1,19 @@
+.contenedor-global-footer {
+    background-color: black;
+}
+
 .separador {
     width: 100%;
     height: 100px;
-    /* podés ajustarlo */
     overflow: hidden;
-    background: black;
-    /* para que todo siga negro */
+    background-color: black;
+    border: none;
 }
 
 .separador svg {
     width: 100%;
     height: 100%;
 }
-
 
 .contenedor-footer {
     background-color: $custom-background;
