@@ -46,7 +46,7 @@ const SobreMi = () => {
 
                 <div className='grupo-redes-sociales'>
                     <div className='contenedor-redondo'><a href="https://www.linkedin.com/in/lautaro-paz-71795b243/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin}  className='iconos-redes'/></a></div> 
-                    <div className='contenedor-redondo'><a href="/CV-LautaroPaz.pdf" dowloand><FontAwesomeIcon icon={faFileLines}  className='iconos-redes'/></a></div>
+                    <div className='contenedor-redondo'><a href="/CV/lautaropaz-cv.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFileLines}  className='iconos-redes'/></a></div>
                 </div>
             </div>
 

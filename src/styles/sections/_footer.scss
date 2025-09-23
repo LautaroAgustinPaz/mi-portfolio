@@ -121,9 +121,6 @@
                 padding: 11px 13px 8px 13px;
                 border: 1px solid $custom-primary;
                 color: $custom-primary;
-                
-
-
 
                 &:hover {
                     background-color: $custom-primary;
@@ -145,7 +142,7 @@
         }
     }
     
-    // Columna - Boton Arriba
+    // Boton Arriba
     .columna-btn-arriba {
         margin: 3rem 0px 0px 0px;
         padding: 0px;
@@ -178,7 +175,7 @@
     // Columna - Corpyright
     .columna-copyright {
         margin: 3rem 0px 0px 0px;
-        border-top: 1px solid $custom-secondary-2;
+        border-top: 1px solid $parrafos-color;
 
         .row {
             .contenedor-copyright {
@@ -186,7 +183,6 @@
                 display: flex;
                 justify-content: space-between;
                 flex-direction: row;
-                color: red;
                 padding: 1rem 3rem 1rem 3rem;
 
                 .negocio-y-derechos {

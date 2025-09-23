@@ -63,7 +63,7 @@ const Habilidades = () => {
         {/* Fila superior */}
         <div id='habilidades' className='fila fila-superior col-12'>
           {[...filaSuperior, ...filaSuperior].map((tecno, index) => (
-            <div key={index} className='card'>
+            <div key={index} className='card card-superior'>
               <img src={tecno.src} alt={tecno.alt} />
             </div>
           ))}
@@ -72,7 +72,7 @@ const Habilidades = () => {
         {/* Fila inferior */}
         <div className='fila fila-inferior col-12'>
           {[...filaInferior, ...filaInferior].map((tecno, index) => (
-            <div key={index} className='card'>
+            <div key={index} className='card card-inferior'>
               <img src={tecno.src} alt={tecno.alt} />
             </div>
           ))}

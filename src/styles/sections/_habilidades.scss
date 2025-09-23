@@ -55,6 +55,7 @@
             
             &.fila-superior {
                 animation-name: moverDerecha;
+                z-index: 1;
               }
         
             &.fila-inferior {
@@ -66,19 +67,18 @@
         .card {
             height: 210px;
             width: 250px;
+            margin: 12px;
+            border-radius: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 12px;
-            border-radius: 30px;
             border: 0.5px solid $titulo-degrade-color-2;
             background-color: $custom-secondary-3;
+            transition: transform 0.3s ease, border 0.3s ease; 
 
-            transition: transform 0.3s ease, border 0.3s ease; // Animación
-
-            &:hover { // Efectos
+            // Efecto para ambas cards
+            &:hover {
                 transform: scale(1.03); // efecto leve de zoom
-                box-shadow: $custom-secondary-2 0px 10px 50px;
                 border: 0.5px solid $custom-secondary-1;
             }
 
@@ -88,6 +88,14 @@
             }
         }
 
+        // Efectos
+        .card-superior:hover {
+            box-shadow: $custom-secondary-2 0px 5px 50px;
+        }
+
+        .card-inferior:hover {
+            box-shadow: $custom-secondary-2 0px 10px 50px;
+        }
     }
 }
 

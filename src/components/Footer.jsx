@@ -41,9 +41,9 @@ const Footer = () => {
                 </ul>
             </div>
 
-            {/* Columna 3 - Contacto */}
-            <div className="col-xs-12 col-sm-6 col-md-4 columna-contacto">
-                <h5 className="contacto-titulo">Contacto</h5>
+        {/* Columna 3 - Contacto */}
+        <div className="col-xs-12 col-sm-6 col-md-4 columna-contacto">
+            <h5 className="contacto-titulo">Contacto</h5>
                 <div className='contenedor-parrafos'>   
                     <p className='contacto-p'><FontAwesomeIcon icon={faEnvelope} className='icono-email'/>lautaropaz__@hotmail.com</p>
                 </div>
@@ -54,7 +54,7 @@ const Footer = () => {
             </div>     
         </div>
         
-        {/* Columna - Boton Arriba */}
+        {/* Boton Arriba */}
         <div className='container-fluid columna-btn-arriba'>
             <div className='row'>
                 <div className='col-12 contenedor-btn-arriba'>
