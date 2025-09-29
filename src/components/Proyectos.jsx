@@ -29,7 +29,7 @@ const Proyectos = () => {
 
   // Efecto para animación al hacer scroll
   useEffect(() => {
-    ScrollReveal().reveal('.contenedor-slide', {
+    ScrollReveal().reveal('.contenedor-titulo', {
       origin: 'bottom',
       distance: '50px',
       duration: 1000,
@@ -38,6 +38,14 @@ const Proyectos = () => {
       reset: false
     });
 
+    ScrollReveal().reveal('.contenedor-slide', {
+      origin: 'left',
+      distance: '100px',
+      duration: 800,
+      delay: 200,
+      easing: 'ease-in-out',
+      reset: false
+    });
   }, []);
 
   // Uso de la libreria "Slick Carrusel"
@@ -68,7 +76,7 @@ const Proyectos = () => {
     <section className='seccion-proyectos container-fluid'>
     
         {/* Titulo     */}
-        <div className='contenedor-titulo'>
+        <div id="proyectos" className='contenedor-titulo'>
             <h2 className='titulos-global text-center'>Proyectos</h2>
         </div>
 
@@ -76,7 +84,7 @@ const Proyectos = () => {
         <div className='contenedor-slide'>
         <Slider {...settings} className='slide'>
           {proyectos.map((proyecto) => (
-            <div key={proyecto.id} className='slide-proyecto' id="proyectos">
+            <div key={proyecto.id} className='slide-proyecto'>
               
               {/* Overlay de info */}
               <div className={`slide ${visibleInfo === proyecto.id ? 'mostrar-overlay' : ''}`}>

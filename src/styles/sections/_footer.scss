@@ -110,6 +110,7 @@
             }
         }
 
+        // CONTENEDOR - REDES SOCIALES
         .contenedor-redes-sociales {
             display: flex;
             flex-direction: row;
@@ -117,23 +118,29 @@
 
             .contenedor-redondo {
                 margin-top: 1rem;
-                border-radius: 100%;
+                border-radius: 50%;
                 padding: 11px 13px 8px 13px;
                 border: 1px solid $custom-primary;
-                color: $custom-primary;
+                color: white;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
 
                 &:hover {
                     background-color: $custom-primary;
-                    color: $custom-background;
+                    color: $custom-background; // el <a> hereda este color
                     cursor: pointer;
-                    }
-
-                a {
-                    padding: 0px!important;
-                    margin: 0px !important;
-                    color: inherit; // Hereda el valor de color que ya se está usando.
-                    text-decoration: none;
+                    box-shadow: 0 4px 8px rgba($custom-primary, 0.3);
                 }
+
+                // icono
+                a {
+                    color: inherit; 
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                }
+                
                 
                 .iconos-redes {
                     font-size: 20px;
@@ -162,9 +169,11 @@
                         cursor: pointer;
                         color: $custom-secondary-1;
                         border: 1px solid $custom-secondary-1;
-
+                        transition: all 0.3s ease;
+                        
                         &:hover {
                             box-shadow: 0 8px 12px 0 $custom-secondary-2;
+                            background-color: #00ff951b;
                         }
                     }
                 }
@@ -220,8 +229,7 @@
     }
 }
 
-
-
+// MEDIA QUERIES
 @media (max-width: 767px) {
     .contenedor-footer {
 

@@ -41,42 +41,42 @@ const Footer = () => {
                 </ul>
             </div>
 
-        {/* Columna 3 - Contacto */}
-        <div className="col-xs-12 col-sm-6 col-md-4 columna-contacto">
-            <h5 className="contacto-titulo">Contacto</h5>
-                <div className='contenedor-parrafos'>   
-                    <p className='contacto-p'><FontAwesomeIcon icon={faEnvelope} className='icono-email'/>lautaropaz__@hotmail.com</p>
-                </div>
-                <div className='contenedor-redes-sociales'>
-                    <div className='contenedor-redondo'><a href="https://github.com/LautaroAgustinPaz" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub}  className='iconos-redes'/></a></div>
-                    <div className='contenedor-redondo'><a href="https://www.linkedin.com/in/lautaro-paz-71795b243/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedinIn}  className='iconos-redes'/></a></div>
-                </div>
-            </div>     
-        </div>
+            {/* Columna 3 - Contacto */}
+            <div className="col-xs-12 col-sm-6 col-md-4 columna-contacto">
+                <h5 className="contacto-titulo">Contacto</h5>
+                    <div className='contenedor-parrafos'>   
+                        <p className='contacto-p'><FontAwesomeIcon icon={faEnvelope} className='icono-email'/>lautaropaz__@hotmail.com</p>
+                    </div>
+                    <div className='contenedor-redes-sociales'>
+                        <div className='contenedor-redondo'><a href="https://github.com/LautaroAgustinPaz" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub}  className='iconos-redes'/></a></div>
+                        <div className='contenedor-redondo'><a href="https://www.linkedin.com/in/lautaropaz/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedinIn}  className='iconos-redes'/></a></div>
+                    </div>
+                </div>     
+            </div>
         
-        {/* Boton Arriba */}
-        <div className='container-fluid columna-btn-arriba'>
-            <div className='row'>
-                <div className='col-12 contenedor-btn-arriba'>
-                    <div className="btn-arriba" onClick={handleScrollToTop}>
-                        <FontAwesomeIcon icon={faChevronUp} className="icon-arriba" />
+            {/* Boton Arriba */}
+            <div className='container-fluid columna-btn-arriba'>
+                <div className='row'>
+                    <div className='col-12 contenedor-btn-arriba'>
+                        <div className="btn-arriba" onClick={handleScrollToTop}>
+                            <FontAwesomeIcon icon={faChevronUp} className="icon-arriba" />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        {/* Copyright y Firma */}
-        <div className='container-fluid columna-copyright'>
-            <div className='row'>
-                <div className='col-12 contenedor-copyright'>
-                    <div className='negocio-y-derechos'>
-                        <p className='parrafo'>2025 - Lautaro Paz</p>
-                        <p className='parrafo'>Todos los derechos reservados.</p>
+            {/* Copyright y Firma */}
+            <div className='container-fluid columna-copyright'>
+                <div className='row'>
+                    <div className='col-12 contenedor-copyright'>
+                        <div className='negocio-y-derechos'>
+                            <p className='parrafo'>2025 - Lautaro Paz</p>
+                            <p className='parrafo'>Todos los derechos reservados.</p>
+                        </div>
+                        <p className='firma'>Desarrollada por: <br /><a href="https://www.linkedin.com/in/lautaro-paz-71795b243/" target="_blank" rel="noopener noreferrer">Lautaro Paz</a></p>
                     </div>
-                    <p className='firma'>Desarrollada por: <br /><a href="https://www.linkedin.com/in/lautaro-paz-71795b243/" target="_blank" rel="noopener noreferrer">Lautaro Paz</a></p>
                 </div>
             </div>
-        </div>
 
     </section>
     </div>

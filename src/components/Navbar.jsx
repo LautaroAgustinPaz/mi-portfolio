@@ -93,11 +93,11 @@ const Navbar = () => {
                 </a>
               </li>
 
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a data-splitting className={`nav-link ${activeSection === 'sobre-mi' ? 'active' : ''}`} href="#contactame"onClick={() => setActiveSection('sobre-mi')}>
                   CONTÁCTAME
                 </a>
-              </li>
+              </li> */}
               
             </ul>
 

@@ -17,7 +17,6 @@ const SobreMi = () => {
       reset: false
     });
 
-    // Animación para el botón "Elegir otra categoria"
     ScrollReveal().reveal('.sobre-mi_row', {
       origin: 'right',
       distance: '100px',
@@ -31,11 +30,11 @@ const SobreMi = () => {
   return (
 
     <section className='container-fluid contenedor-sobremi'>
-      <div className='contenedor-titulo'>
+      <div id='sobre-mi' className='contenedor-titulo'>
         <h2 className='sobre-mi_titulo text-center'>Sobre mi</h2>
       </div>
 
-        <div id='sobre-mi' className="row sobre-mi_row">
+        <div className="row sobre-mi_row">
 
             <div className="col-sm-12 col-md-6 col-lg-6 columna-biografia">
                 <h2 className='biografia_titulo'>Hola, soy</h2>
@@ -46,7 +45,7 @@ const SobreMi = () => {
 
                 <div className='grupo-redes-sociales'>
                     <div className='contenedor-redondo'><a href="https://www.linkedin.com/in/lautaro-paz-71795b243/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin}  className='iconos-redes'/></a></div> 
-                    <div className='contenedor-redondo'><a href="/CV/lautaropaz-cv.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFileLines}  className='iconos-redes'/></a></div>
+                    <div className='contenedor-redondo'><a href="/CV/lautaropaz-cv-it.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFileLines}  className='iconos-redes'/></a></div>
                 </div>
             </div>
 

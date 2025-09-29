@@ -1,6 +1,6 @@
 .seccion-proyectos {
     background: black;
-    padding: 4rem 0;
+    padding: 0 0 4rem 0;
     overflow: hidden;
 
     .contenedor-titulo {
@@ -93,7 +93,7 @@
                         font-weight: 600;
                         text-decoration: none;
                         transition: 0.3s ease;
-                        border: 2px solid black;
+                        border: 1.5px solid black;
                         font-size: 0.9rem;
                     }
 
@@ -106,9 +106,14 @@
 
                     .blanco {
                         font-family: $parrafos;
-                        font-weight: 100 !important;
+                        font-weight: 500 !important;
                         background-color: white;
                         color: black;
+
+                        &:hover {
+                            background: $custom-degrade;
+                            font-weight: 600;
+                        }
                     }
 
                     .negro:hover,
@@ -140,13 +145,13 @@
 
                 bottom: 0; // 👈 pegado al borde inferior
                 right: 100; // 👈 pegado al borde derecho
-                margin: 0.8rem 2rem; // un pequeño respiro
+                margin: 0.7rem 2rem; // un pequeño respiro
                 z-index: 10;
-                padding: 0.6rem 1.4rem;
+                padding: 0.6rem 1.3rem;
                 border: none;
                 background-color: rgb(0, 124, 103);
                 color: white;
-                border: 1px solid white;
+                border: 1.5px solid white;
                 border-radius: 10px;
                 cursor: pointer;
                 font-weight: bold;

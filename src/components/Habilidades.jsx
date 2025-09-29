@@ -55,13 +55,13 @@ const Habilidades = () => {
 
     <section className='seccion-habilidades container-fluid'>
       {/* Titulo */}
-      <div className='contenedor-titulo'>
+      <div id='habilidades' className='contenedor-titulo'>
         <h2 className='habilidades-titulo text-center'>Habilidades</h2>
       </div>
 
-      <div className='contenedor-habilidades'>
+      <div className='habilidades contenedor-habilidades'>
         {/* Fila superior */}
-        <div id='habilidades' className='fila fila-superior col-12'>
+        <div className='fila fila-superior col-12'>
           {[...filaSuperior, ...filaSuperior].map((tecno, index) => (
             <div key={index} className='card card-superior'>
               <img src={tecno.src} alt={tecno.alt} />
