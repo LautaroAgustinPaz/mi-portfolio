@@ -59,7 +59,7 @@ const Habilidades = () => {
         <h2 className='habilidades-titulo text-center'>Habilidades</h2>
       </div>
 
-      <div className='habilidades contenedor-habilidades'>
+      <div className='contenedor-habilidades'>
         {/* Fila superior */}
         <div className='fila fila-superior col-12'>
           {[...filaSuperior, ...filaSuperior].map((tecno, index) => (

@@ -82,13 +82,13 @@ const Navbar = () => {
               </li>
 
               <li className="nav-item">
-                <a data-splitting className={`nav-link ${activeSection === 'sobre-mi' ? 'active' : ''}`} href="#habilidades"onClick={() => setActiveSection('sobre-mi')}>
+                <a data-splitting className={`nav-link ${activeSection === 'habilidades' ? 'active' : ''}`} href="#habilidades"onClick={() => setActiveSection('habilidades')}>
                   HABILIDADES
                 </a>
               </li>
 
               <li className="nav-item">
-                <a data-splitting className={`nav-link ${activeSection === 'sobre-mi' ? 'active' : ''}`} href="#proyectos"onClick={() => setActiveSection('sobre-mi')}>
+                <a data-splitting className={`nav-link ${activeSection === 'proyectos' ? 'active' : ''}`} href="#proyectos"onClick={() => setActiveSection('proyectos')}>
                   PROYECTOS
                 </a>
               </li>
