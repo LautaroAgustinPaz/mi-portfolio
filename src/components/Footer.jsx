@@ -27,7 +27,7 @@ const Footer = () => {
 
             {/* Columna 1 - Foto */}
             <div className="col-sm-12 col-md-4 columna-img">
-                <img src="public/imgs/logo-lautaropaz.png" alt="Logo" className="img-fluid footer-img" loading="lazy"></img>
+                <img src="/imgs/logo-lautaropaz.png" alt="Logo" className="img-fluid footer-img" loading="lazy"></img>
             </div>
 
             {/* Columna 2 - Indice */}
