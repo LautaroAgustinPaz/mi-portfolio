@@ -14,7 +14,7 @@ const Banner = () => {
       </video>
       <div className='content'>
         <h2 className='banner-titulo-dev'>PROGRAMADOR</h2>
-        <h2 className='banner-titulo-front-end'>FRONT END</h2>
+        <h2 className='banner-titulo-front-end'>FULL STACK</h2>
       </div>
     </section>
   );
